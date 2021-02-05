@@ -20,14 +20,20 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 		
-		System.out.println("Teste 2: Seler finf by deparment");
+		System.out.println("Teste 2: Seler find by deparment");
 		Department department = new Department(2, null);
 		
 		List<Seller> list =  sellerDao.findByDepartment(department);
 		for(Seller obj : list) {
 			System.out.println(obj);
 		}
-	
+		
+		System.out.println("Teste3 : Seler find All");
+				
+		list =  sellerDao.findAll();
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
 	
 	}
 
